@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* universal selector */
+      * {
+        background-color: #4d4d4d;
+        color: #ffffff;
+      }
+
+      /* individual selector */
+      p {
+        background-color: #abad30;
+      }
+
+      /* class and id selector */
+      .warning {
+        background-color: #f18238;
+        color: #ffffff;
+        padding: 3px;
+        border: 2px solid #ffffff;
+      }
+
+      /* and selector (chained) */
+      li.bg-black.text-white {
+        background-color: #000000;
+        padding: 5px;
+      }
+
+      /* combined selector */
+      /* select span and li */
+      span,
+      li {
+        background-color: #4494ad;
+      }
+
+      /* inside an element */
+      /* need to fulfill all criteria */
+      div ul li {
+        background-color: #0d64e7;
+      }
+
+      /* direct child */
+      /* want to target the div and all li the is a direct child of the div */
+      div > li {
+        background-color: #c819df;
+      }
+
+      /* sibling  ~ or + */
+      /* + mean -- only target the p tag that is next to the one with class="sibling" */
+      /* ~ mean -- seclect all the p tag that come after class="sibling" */
+      .sibling + p {
+        background-color: #cc6860;
+      }
+    </style>
+  </head>
+  <body>
+    <div>Welcome to live class</div>
+    <span>Span is just a span, nothing more</span>
+    <p>We all know paragraph</p>
+    <ul>
+      <li class="bg-black text-white">item1</li>
+      <li class="warning">item2</li>
+      <li>item3</li>
+      <li>item4</li>
+      <li>item5</li>
+    </ul>
+
+    <div>
+      <li>awesome. It is sibling of div</li>
+      <ul>
+        <li>highlight me</li>
+        <li>highlight me</li>
+      </ul>
+      <li>second li in the div. It is sibling of div</li>
+    </div>
+
+    <section>
+      <p>Test 1</p>
+      <p class="sibling">Test 2</p>
+      <p>Test 3</p>
+      <p>Test 4</p>
+      <p>Test 5</p>
+    </section>
+  </body>
+</html>
